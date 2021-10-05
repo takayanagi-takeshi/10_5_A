@@ -1,0 +1,89 @@
+@charset "UFT-8";
+
+.container {
+  width: 768px;
+  margin: 40px auto;
+  background-color: #04abed;
+  border-radius: 20px;
+  padding: 40px 40px 80px;
+  position: relative;
+}
+.container::after {
+  content: "";
+  background: url(images/javascript.png) no-repeat;
+  background-size: contain;
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: -10px;
+  bottom: -90px;
+}
+.page_ttl {
+  text-align: center;
+  margin: 0 0 40px;
+  color: #FFF;
+  font-size: 24px;
+}
+.inner {
+  padding: 40px 60px;
+  background-color: #FFF;
+  border-radius: 20px;
+}
+
+/* Form Parts */
+.input_wrapper {
+  margin-bottom: 60px;
+}
+#inputField {
+  border: solid 1px #999;
+  padding: 0.2em 0.5em;
+}
+.btn {
+  padding: 0.2em 1em;
+  border: solid 1px #CCC;
+  background-color: #EEE;
+  border-radius: 4px;
+  margin-left: 0.5em;
+}
+
+#outPutField {
+  margin-bottom: 60px;
+}
+
+#outPutList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+
+#outPutList li {
+  width: 31%;
+  margin-bottom: 20px;
+}
+
+#outPutList img {
+  width: 100%;
+  height: auto;
+}
+
+/* Animation Box */
+.sec {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec p {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #04abed;
+  text-align: center;
+  line-height: 200px;/*1行のテキストを天地ど真ん中*/
+  color: #FFF;
+  font-weight: bold;
+  font-size: 20px;
+}
