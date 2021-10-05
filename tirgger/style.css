@@ -87,3 +87,12 @@
   font-weight: bold;
   font-size: 20px;
 }
+
+.animate__animated {
+  visibility: hidden;
+  /* display: none; */
+}
+
+.animate__animated.visi {
+  visibility: visible;
+}

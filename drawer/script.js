@@ -1,4 +1,34 @@
-// 9月24日からの続き
+
+// *hamburger Menu
+let hmb_menu = document.getElementById('hamburger_menu');
+let gnav = document.getElementById('gnav');
+let gnavLinks = document.querySelectorAll('#gnav a');
+let scrollHtml = document.getElementById('.scrollPrevent');
+
+hmb_menu.addEventListener('click', () => {
+  hmb_menu.classList.toggle('active');
+  hmb_menu.classList.toggle('open');
+  scrollHtml.classList.toggle('scrollPrevent');
+})
+
+
+
+for (let i = 0; i < gnavLinks.length; i++) {
+  const gnavLink = gnavLinks[i];
+  gnavLink.addEventListener('click', () => {
+    hmb_menu.classList.remove('active');
+    gnav.classList.remove('open');
+    if (scrollHtml.classList.contains('scrollPrevent')) {
+      scrollHtml.classList.remove('scrollPrevent');
+    }
+  })
+}
+
+
+
+
+
+
 
 // ターゲットを変数animaTargetsに代入（ここでは３つ）
 let animeTargets = document.querySelectorAll('.animate__animated');
@@ -7,7 +37,7 @@ let animeTargets = document.querySelectorAll('.animate__animated');
 window.addEventListener('scroll', () => {
   for (let i = 0; i < animeTargets.length; i++) {
     // ターゲットのTOPの座標（スクロールしていくと０に近づく）
-    let animeTarget = animeTargets[i].getBoundingClientRect().top;
+    const animeTarget = animeTargets[i].getBoundingClientRect().top;
     // console.log(animeTarget)
     // スクロール中の座標
     let scroll = window.pageYOffset || document.documentElement.scrollTop;
